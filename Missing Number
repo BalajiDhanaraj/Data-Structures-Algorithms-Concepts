@@ -1,0 +1,23 @@
+public class Exercise {
+    public void missingNumber(int[] intArray) {
+        // TODO
+        int sum1 = 0;
+        int sum2 = 0;
+        for(int i : intArray){
+            sum1+=i;
+        }
+        sum2 = 10*(10+1)/2;
+        int diff = sum2-sum1;
+        System.out.print(diff);
+        // for (int i=0;i<intArray.length;i++){
+        //     if(sum==intArray[i]){
+        //       // System.out.println(sum);
+        //     }else{
+        //         System.out.print(sum);
+        //         break;
+        //     }
+        //     sum++;
+        // } 
+    }
+
+}
