@@ -1,0 +1,50 @@
+class maxs {
+  public static void main(String[] args) {
+    maxs mn = new maxs();
+    int[] intArray = {10,60,30,40,50};
+    String pairs = mn.maxProduct(intArray);
+    System.out.println(pairs);
+
+  }
+
+  // Max Product
+  // public String maxProduct(int[] intArray) {
+  //   int maxProduct = 0;
+  //   String pairs = "";
+  //   for (int i = 0; i<intArray.length; i++) {
+  //     for (int j = i+1; j<intArray.length; j++) {
+  //       if (intArray[i]*intArray[j]>maxProduct) {
+  //         maxProduct = intArray[i]*intArray[j];
+  //         pairs = Integer.toString(intArray[i]) + "," + Integer.toString(intArray[j]);
+  //       }
+  //     }
+  //   }
+  //   return pairs;
+  // }
+
+   public String maxProduct(int[] intArray) {
+        // TODO
+        int max1 =intArray[0];
+        int max2 =intArray[0];
+        String pairs1 ="";
+        String pairs2 ="";
+        for(int i=0;i<intArray.length;i++){
+            if(intArray[i]>max1){
+                max1 = intArray[i];
+              pairs1 = Integer.toString(intArray[i]);
+            }
+        }
+         for(int j=1;j<intArray.length;j++){
+            if(intArray[j]>max2 && intArray[j]<max1){
+                max2 = intArray[j];
+              pairs2 = Integer.toString(intArray[j]);
+            }
+        }
+      // System.out.println(max1+" "+max2);
+        String two = pairs1+" "+pairs2;
+        return two;  
+          }
+
+ }
+
+  
