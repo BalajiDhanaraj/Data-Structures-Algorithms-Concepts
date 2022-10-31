@@ -1,0 +1,50 @@
+Write a function called middle that takes a list and returns a new list that contains all but the first and last elements.
+
+myArray = [1, 2, 3, 4]
+middle(myArray)  # [2,3]
+
+code
+---------------------------
+import java.util.Arrays;
+
+public class Exercise {
+    static int[] middle(int[] arr) {
+         return Arrays.copyOfRange(arr, 1, arr.length-1); 
+    }
+
+}
+-------------------------
+class mid{
+
+ static int[] middle(int[] arr) {
+   
+        int len = arr.length;
+        int[] arr1 = new int[2];
+        for (int i=0;i<arr.length-1;i++){
+            if(i!=0){
+              System.out.println(arr[i]);
+               System.out.println("----------------");
+                arr1[i]+=arr[i];
+            }
+        } 
+      return arr1;
+}
+
+
+
+
+public static void main(String args[]){
+
+mid m = new mid();
+
+int[] arr = {1,2,3,4};
+
+int[] val = middle(arr);
+
+for(int j=0;j<val.length;j++){
+  System.out.println(val[j]);
+}
+  
+}
+  
+}
