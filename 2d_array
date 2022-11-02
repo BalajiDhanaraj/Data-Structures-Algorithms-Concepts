@@ -1,0 +1,41 @@
+Given 2D array calculate the sum of diagonal elements.
+
+Example
+
+myArray2D= {{1,2,3},{4,5,6},{7,8,9}};
+ 
+sumDiagonal(myArray2D) # 15
+
+--------------------------------------------------------------
+class dia{
+
+
+  public int matrix_dia(int[][] arr){
+
+    int sum_arr = 0;
+    
+    for(int i=0;i<arr.length;i++){
+      for(int j=0;j<arr.length;j++){
+        if(arr[i]==arr[j]){
+          sum_arr+=arr[i][j];
+          
+        }
+      }
+    }
+   
+    return sum_arr;
+  }
+  
+
+
+  public static void main(String args[]){
+
+    dia d = new dia();
+    int[][] arr = {{1,2,3},{4,5,6},{7,8,9}};
+    //int[][] arr2 = new int[5][5];
+    int total = d.matrix_dia(arr);
+    System.out.println("sum arr "+total);
+
+    
+  }
+}
