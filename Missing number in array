@@ -1,0 +1,54 @@
+Write a function to find the missing number in a given integer array of 1 to 100.
+
+Example
+
+myArray = {1,2,3,4,6}
+missingNumber(myArray, 6) // 5
+------------------------------------------
+import java.util.Arrays;  
+class mis {
+  public static void main(String[] args) {
+    mis mn = new mis();
+    int[] intArray = {1,2,3,4,5,6,8};
+    int totalcount = intArray.length+1;
+    int missedvalues = mn.missingValue(intArray,totalcount);
+    System.out.println(missedvalues);
+
+  }
+
+   public int missingValue(int[] arr,int totalcount) {
+
+    int miss =0;
+    
+     for(int i=0,j=1;i<arr.length && j<=totalcount;i++,j++){
+       if(arr[i]!=j){
+         miss = j;
+       }
+     }
+        
+    return miss;
+   }
+   --------------------------------------------------
+   
+    public int missingValue(int[] arr,int totalcount) {
+
+     int execpted =0;
+     int org = 0;
+
+     for(int i=1;i<=totalcount;i++){
+       execpted+=i;
+     }
+     
+     for(int i=0;i<intArray.length;i++){
+       org+=intArray[i];
+     }
+
+     System.out.println(execpted);
+      System.out.println(org);
+     int missed = execpted - org;
+        
+    return missed;
+   }
+}
+
+  
