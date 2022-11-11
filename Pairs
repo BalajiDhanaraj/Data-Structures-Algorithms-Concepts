@@ -5,3 +5,44 @@ Example
 
 pairSum({2, 4, 3, 5, 6, -2, 4, 7, 8, 9},7)
 Output : "2:5 4:3 3:4 -2:9 "
+------------------------------------------------------------
+class pair{
+
+  public static String pairs(int[] myArray, int sum){
+    // String res = " ";
+    
+    // for(int i=0;i<arr.length;i++){
+    //   for(int j=i+1;j<arr.length;j++){
+    //     if(arr[i]+arr[j]==n){
+    //       res=arr[i]+":"+arr[j];
+    //     }
+    //   }
+    // }
+
+    // return res;
+    String result = "";
+    for(int i=0; i<myArray.length; i++) {
+      for(int j=i+1; j<myArray.length; j++) {
+        if (myArray[i]+myArray[j]==sum) {
+          result += myArray[i]+":"+myArray[j]+" ";
+        }
+      }
+    }
+    return result;
+  }
+
+
+  public static void main(String[] args){
+
+    //dup dp = new dup();
+    int[] arr = {2, 4, 3, 5, 6, -2, 4, 7, 8, 9};   
+    int sum = 7;
+    String fin = " ";
+    fin = pairs(arr,sum);
+        //printing array elements   
+    for (int i=0; i<arr.length; i++){
+      System.out.println(arr[i]);  
+    }
+     
+ }
+}
