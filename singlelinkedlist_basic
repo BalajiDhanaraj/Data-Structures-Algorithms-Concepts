@@ -1,0 +1,47 @@
+import java.util.*;
+import java.util.LinkedList;
+class single{
+
+public node head;
+public node tail;  
+public int size;
+  
+public node createSingleLinkedlist(int nodeValue){
+
+  head = new node();
+  node node = new node();
+  node.next = null;
+  node.value = nodeValue;
+  head = node;
+  tail = node;
+  size = 1;
+  return head;
+   
+}
+  
+}
+--------------------------------
+import java.util.*;
+import java.io.*;
+import java.util.LinkedList;
+public class node{
+
+  public int value;
+  public node next;
+
+  
+}
+---------------------------------
+import java.util.*;
+import java.io.*;
+import java.util.LinkedList;
+public class link{
+
+public static void main(String[] args){
+
+  single sll = new single();
+  sll.createSingleLinkedlist(5);
+  System.out.println(sll.head.value);
+ 
+} 
+}
