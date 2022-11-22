@@ -45,3 +45,34 @@ public static void main(String[] args){
  
 } 
 }
+---------------------------------------------------------
+ public void insertInlinkedList(int nodeValue,int location){
+
+    node newNode = new node();
+    newNode.value = nodeValue;
+
+    if(head == null){
+      createSingleLinkedlist(nodeValue);
+      return;
+    }else if(location == 0){
+      node temp = head;
+      head = newNode;
+      head.next = temp;     
+    }else if(location >=size ){
+      newNode.next = null;
+      tail.next = newNode;
+      tail = newNode;
+    }else{
+      node temp,current;
+      int index=0;
+      temp = head;
+      current = null;
+      while(index<location-1){
+        current = temp;
+        temp = temp.next;
+        index++;
+      }
+        current.next = newNode;
+        newNode = temp;
+        size++;
+    }  
